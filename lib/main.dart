@@ -11,7 +11,6 @@ void main() => runApp(MaterialApp(
           appBar: AppBar(
             title: Text('MEDIZONE'),
             centerTitle: true,
-            
           ),
           drawer: Drawer(
             child: ListView(
@@ -22,13 +21,9 @@ void main() => runApp(MaterialApp(
                       color: Colors.lightBlue,
                     ),
                     child: Center(
-                      child: Text(
-                        'MEDIZONE',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
-                        ),
-                      ),
+                      child: Image(
+                        image: AssetImage('assets/medizone.png'),
+                        )
                     )),
                 ListTile(
                   leading: Icon(Icons.home),
@@ -57,13 +52,16 @@ void main() => runApp(MaterialApp(
             ),
           ),
           body: Center(
-           child: Text('Hello Medizone'),
+           child: Image(
+             image: NetworkImage('https://i.pinimg.com/originals/d1/33/fd/d133fd867fd743cb48b80377173bc77a.jpg'), 
+           )
           ),
-          floatingActionButton: Center(
-            child: FloatingActionButton(
-              child: Text('login'),
+          // floatingActionButton: Center(
+          //   child: FloatingActionButton(
+          //     child: Text('login'),
              
-            ),
-          ));
+          //   ),
+          // )
+          );
       }
     }
